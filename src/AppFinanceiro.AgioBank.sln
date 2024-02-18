@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.AgioBank.Api", "AppFinanceiro.AgioBank.Api\AppFinanceiro.AgioBank.Api.csproj", "{FB72A447-8CE0-4139-8E1F-CC032D733E8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppFinanceiro.AgioBank.Api", "AppFinanceiro.AgioBank.Api\AppFinanceiro.AgioBank.Api.csproj", "{FB72A447-8CE0-4139-8E1F-CC032D733E8E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{DE143A52-8E38-4A59-9BC7-0AC993493DAF}"
 EndProject
@@ -17,15 +17,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{63A9DB72
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ioc", "Ioc", "{56CDD429-A146-4492-B373-201039F69B59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.AgioBank.Application", "AppFinanceiro.AgioBank.Application\AppFinanceiro.AgioBank.Application.csproj", "{F8B8D522-E78C-4FEA-A806-ACD4DA560A4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppFinanceiro.AgioBank.Application", "AppFinanceiro.AgioBank.Application\AppFinanceiro.AgioBank.Application.csproj", "{F8B8D522-E78C-4FEA-A806-ACD4DA560A4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.AgioBank.Data", "AppFinanceiro.AgioBank.Data\AppFinanceiro.AgioBank.Data.csproj", "{1A83A7E1-627D-4566-9B57-FB9EDF4761B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppFinanceiro.AgioBank.Data", "AppFinanceiro.AgioBank.Data\AppFinanceiro.AgioBank.Data.csproj", "{1A83A7E1-627D-4566-9B57-FB9EDF4761B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.AgioBank.Domain", "AppFinanceiro.AgioBank.Domain\AppFinanceiro.AgioBank.Domain.csproj", "{A935DFD0-F87C-4AFD-8765-569B3F827728}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppFinanceiro.AgioBank.Domain", "AppFinanceiro.AgioBank.Domain\AppFinanceiro.AgioBank.Domain.csproj", "{A935DFD0-F87C-4AFD-8765-569B3F827728}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.AgioBank.Ioc", "AppFinanceiro.AgioBank.Ioc\AppFinanceiro.AgioBank.Ioc.csproj", "{267CCDA1-5A18-4F0E-8BCA-8F593A7EBD7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppFinanceiro.AgioBank.Ioc", "AppFinanceiro.AgioBank.Ioc\AppFinanceiro.AgioBank.Ioc.csproj", "{267CCDA1-5A18-4F0E-8BCA-8F593A7EBD7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.AgioBank.Utils", "AppFinanceiro.AgioBank.Utils\AppFinanceiro.AgioBank.Utils.csproj", "{0A2F1B96-596A-49D2-AAEE-6C8198EFEDEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppFinanceiro.AgioBank.Utils", "AppFinanceiro.AgioBank.Utils\AppFinanceiro.AgioBank.Utils.csproj", "{0A2F1B96-596A-49D2-AAEE-6C8198EFEDEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{64E13411-DE38-4C80-B581-8CE7A97DF2D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.AgioBank.UnitTests", "..\tests\AppFinanceiro.AgioBank.UnitTests\AppFinanceiro.AgioBank.UnitTests.csproj", "{3AA78F3C-47C0-433E-8167-E31215B47A89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,10 @@ Global
 		{0A2F1B96-596A-49D2-AAEE-6C8198EFEDEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A2F1B96-596A-49D2-AAEE-6C8198EFEDEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A2F1B96-596A-49D2-AAEE-6C8198EFEDEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AA78F3C-47C0-433E-8167-E31215B47A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AA78F3C-47C0-433E-8167-E31215B47A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AA78F3C-47C0-433E-8167-E31215B47A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AA78F3C-47C0-433E-8167-E31215B47A89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +76,7 @@ Global
 		{A935DFD0-F87C-4AFD-8765-569B3F827728} = {82C0E5F9-F5BD-4933-BE59-8DEC2322DF2B}
 		{267CCDA1-5A18-4F0E-8BCA-8F593A7EBD7C} = {56CDD429-A146-4492-B373-201039F69B59}
 		{0A2F1B96-596A-49D2-AAEE-6C8198EFEDEB} = {63A9DB72-FCC0-458F-9FC1-0C25D0D15AA3}
+		{3AA78F3C-47C0-433E-8167-E31215B47A89} = {64E13411-DE38-4C80-B581-8CE7A97DF2D6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3768B438-336C-436B-A584-2A353669CE31}
