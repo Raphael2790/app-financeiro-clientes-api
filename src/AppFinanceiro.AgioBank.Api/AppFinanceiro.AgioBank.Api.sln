@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.AgioBank.Api", "AppFinanceiro.AgioBank.Api\AppFinanceiro.AgioBank.Api.csproj", "{FB72A447-8CE0-4139-8E1F-CC032D733E8E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{DE143A52-8E38-4A59-9BC7-0AC993493DAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{DB3B77DE-1EEB-4237-8EC0-43F85AE3C7C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{A537F176-EAE8-47AB-87A7-7E9B7474A385}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{82C0E5F9-F5BD-4933-BE59-8DEC2322DF2B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{63A9DB72-FCC0-458F-9FC1-0C25D0D15AA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ioc", "Ioc", "{56CDD429-A146-4492-B373-201039F69B59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.AgioBank.Application", "AppFinanceiro.AgioBank.Application\AppFinanceiro.AgioBank.Application.csproj", "{F8B8D522-E78C-4FEA-A806-ACD4DA560A4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.AgioBank.Data", "AppFinanceiro.AgioBank.Data\AppFinanceiro.AgioBank.Data.csproj", "{1A83A7E1-627D-4566-9B57-FB9EDF4761B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.AgioBank.Domain", "AppFinanceiro.AgioBank.Domain\AppFinanceiro.AgioBank.Domain.csproj", "{A935DFD0-F87C-4AFD-8765-569B3F827728}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.AgioBank.Ioc", "AppFinanceiro.AgioBank.Ioc\AppFinanceiro.AgioBank.Ioc.csproj", "{267CCDA1-5A18-4F0E-8BCA-8F593A7EBD7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFinanceiro.AgioBank.Utils", "AppFinanceiro.AgioBank.Utils\AppFinanceiro.AgioBank.Utils.csproj", "{0A2F1B96-596A-49D2-AAEE-6C8198EFEDEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB72A447-8CE0-4139-8E1F-CC032D733E8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB72A447-8CE0-4139-8E1F-CC032D733E8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB72A447-8CE0-4139-8E1F-CC032D733E8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB72A447-8CE0-4139-8E1F-CC032D733E8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8B8D522-E78C-4FEA-A806-ACD4DA560A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B8D522-E78C-4FEA-A806-ACD4DA560A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B8D522-E78C-4FEA-A806-ACD4DA560A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B8D522-E78C-4FEA-A806-ACD4DA560A4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A83A7E1-627D-4566-9B57-FB9EDF4761B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A83A7E1-627D-4566-9B57-FB9EDF4761B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A83A7E1-627D-4566-9B57-FB9EDF4761B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A83A7E1-627D-4566-9B57-FB9EDF4761B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A935DFD0-F87C-4AFD-8765-569B3F827728}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A935DFD0-F87C-4AFD-8765-569B3F827728}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A935DFD0-F87C-4AFD-8765-569B3F827728}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A935DFD0-F87C-4AFD-8765-569B3F827728}.Release|Any CPU.Build.0 = Release|Any CPU
+		{267CCDA1-5A18-4F0E-8BCA-8F593A7EBD7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{267CCDA1-5A18-4F0E-8BCA-8F593A7EBD7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{267CCDA1-5A18-4F0E-8BCA-8F593A7EBD7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{267CCDA1-5A18-4F0E-8BCA-8F593A7EBD7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A2F1B96-596A-49D2-AAEE-6C8198EFEDEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A2F1B96-596A-49D2-AAEE-6C8198EFEDEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A2F1B96-596A-49D2-AAEE-6C8198EFEDEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A2F1B96-596A-49D2-AAEE-6C8198EFEDEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FB72A447-8CE0-4139-8E1F-CC032D733E8E} = {DE143A52-8E38-4A59-9BC7-0AC993493DAF}
+		{F8B8D522-E78C-4FEA-A806-ACD4DA560A4A} = {A537F176-EAE8-47AB-87A7-7E9B7474A385}
+		{1A83A7E1-627D-4566-9B57-FB9EDF4761B1} = {DB3B77DE-1EEB-4237-8EC0-43F85AE3C7C2}
+		{A935DFD0-F87C-4AFD-8765-569B3F827728} = {82C0E5F9-F5BD-4933-BE59-8DEC2322DF2B}
+		{267CCDA1-5A18-4F0E-8BCA-8F593A7EBD7C} = {56CDD429-A146-4492-B373-201039F69B59}
+		{0A2F1B96-596A-49D2-AAEE-6C8198EFEDEB} = {63A9DB72-FCC0-458F-9FC1-0C25D0D15AA3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3768B438-336C-436B-A584-2A353669CE31}
+	EndGlobalSection
+EndGlobal
