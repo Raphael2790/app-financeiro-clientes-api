@@ -1,13 +1,8 @@
 ﻿namespace AppFinanceiro.AgioBank.Domain.ValueObjects;
 
-public class Email
+public class Email(string endereco)
 {
-    public string Endereco { get; private set; }
-
-    public Email(string endereco)
-    {
-        Endereco = endereco;
-    }
+    public string Endereco { get; private set; } = endereco;
 
     public static implicit operator Email(string endereco)
     {

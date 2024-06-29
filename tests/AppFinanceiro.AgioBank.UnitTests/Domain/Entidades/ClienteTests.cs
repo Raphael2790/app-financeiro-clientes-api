@@ -14,7 +14,7 @@ public class ClienteTests
        
         // Assert
         cliente.EhValido().Should().BeFalse();
-        cliente.Notificacoes.Should().HaveCount(7);
+        cliente.Notificacoes.Should().HaveCount(13);
         cliente.Notificacoes.Should().Contain(n => n.Mensagem == "O nome deve conter no mínimo 3 caracteres");
         cliente.Notificacoes.Should().Contain(n => n.Mensagem == "O sobrenome deve conter no mínimo 3 caracteres");
         cliente.Notificacoes.Should().Contain(n => n.Mensagem == "O email está em formato inválido");

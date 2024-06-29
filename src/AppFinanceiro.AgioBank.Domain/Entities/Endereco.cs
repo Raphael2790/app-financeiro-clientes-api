@@ -1,4 +1,6 @@
-﻿namespace AppFinanceiro.AgioBank.Domain.Entities;
+﻿using AppFinanceiro.AgioBank.Domain.Validators;
+
+namespace AppFinanceiro.AgioBank.Domain.Entities;
 
 public class Endereco(string logradouro, string numero, string complemento, string bairro, string cidade, string estado, string pais, string cep, Guid idCliente) : Entidade
 {
@@ -11,4 +13,9 @@ public class Endereco(string logradouro, string numero, string complemento, stri
     public string Pais { get; private set; } = pais;
     public string Cep { get; private set; } = cep;
     public Guid IdCliente { get; private set; } = idCliente;
+
+    public void Validar()
+    {
+        base.Validar(EnderecoValidador.Instance, this);
+    }
 }

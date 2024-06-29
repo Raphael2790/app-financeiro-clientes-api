@@ -1,10 +1,11 @@
-﻿using AppFinanceiro.AgioBank.Domain.Enums;
+﻿using AppFinanceiro.AgioBank.Domain.Common;
+using AppFinanceiro.AgioBank.Domain.Enums;
 using AppFinanceiro.AgioBank.Domain.Validators;
 using AppFinanceiro.AgioBank.Domain.ValueObjects;
 
 namespace AppFinanceiro.AgioBank.Domain.Entities;
 
-public class Cliente : Entidade
+public class Cliente : Entidade, IRaizAgregacao
 {
     public string Nome { get; private set; }
     public string Sobrenome { get; private set; }

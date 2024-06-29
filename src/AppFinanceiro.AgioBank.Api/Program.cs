@@ -1,3 +1,6 @@
+using AppFinanceiro.AgioBank.Api.Middlewares;
+using Microsoft.AspNetCore.Mvc;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,7 +8,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddScoped<HeaderValidationMiddleware>();
+builder.Services.AddScoped<ExceptionMiddleware>();
+
 var app = builder.Build();
+
+app.MapPost("/cliente", ([FromServices] IServiceProvider serviceProvider, [FromBody] string texto) => 
+{
+    return "Hello World!";
+}).ShortCircuit();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -15,5 +26,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<ExceptionMiddleware>();
+app.UseMiddleware<HeaderValidationMiddleware>();
 
 app.Run();
