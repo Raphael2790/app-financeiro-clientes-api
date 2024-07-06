@@ -1,26 +1,23 @@
-﻿using System.Text.RegularExpressions;
+﻿using AppFinanceiro.AgioBank.Domain.Common;
+using AppFinanceiro.AgioBank.Domain.Validators;
 
 namespace AppFinanceiro.AgioBank.Domain.ValueObjects;
-public class Telefone
-{
-    private const string pattern = @"^\+\d{2} \(\d{2}\) \d{5}-\d{4}$";
-    private Regex regex = new Regex(pattern, RegexOptions.Compiled);
+public class Telefone(string telefone) : ObjetoNotificavel
+{    
+    private const int Length = 19;
 
-    public string CodPais { get; private set; }
-    public string DDD { get; private set; }
-    public string Numero { get; private set; }
+    public string CodPais { get; private set; } = string.IsNullOrEmpty(telefone) || telefone.Length != Length ? string.Empty : telefone[1..3];
+    public string DDD { get; private set; } = string.IsNullOrEmpty(telefone) || telefone.Length != Length ? string.Empty : telefone[5..7]; 
+    public string Numero { get; private set; } = string.IsNullOrEmpty(telefone) || telefone.Length != Length ? string.Empty : telefone[9..];
     public bool EValido { get; set; }
 
-    public Telefone(string telefone)
+    public override string ToString()
     {
-        EValido = Validar(telefone);
-
-        if(EValido)
-        {
-            CodPais = telefone[1..2];
-            DDD = telefone[4..5];
-            Numero = telefone[7..];
-        }
+        return $"+{CodPais} ({DDD}) {Numero}";
     }
-    private bool Validar(string telefone) => regex.IsMatch(telefone);
+
+    public void Validar()
+    {
+        base.Validar(TelefoneValidador.Instance, this);
+    }
 }

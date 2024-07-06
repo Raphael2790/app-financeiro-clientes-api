@@ -16,13 +16,5 @@ public abstract class Entidade : ObjetoNotificavel
         DataCadastro = DateTime.Now;
     }
 
-    public virtual void Validar<T>(AbstractValidator<T> validator, T entidade) where T : Entidade
-    {
-        var result = validator.Validate(entidade);
-        if (!result.IsValid)
-        {
-            var notificacoes = result.Errors.Select(error => new Notificacao(error.ErrorMessage));
-            AdicionarNotificacoes(notificacoes);
-        }
-    }
+    
 }

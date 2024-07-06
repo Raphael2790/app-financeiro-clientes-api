@@ -25,10 +25,7 @@ public class ClienteValidador : AbstractValidator<Cliente>
             .WithMessage("O sobrenome deve conter no mínimo 3 caracteres");
 
         RuleFor(c => c.Telefone)
-            .NotNull()
-            .WithMessage("O telefone do cliente deve ser informado")
-            .Must(c => c.EValido)
-            .WithMessage("O telefone está em formato inválido");
+            .SetValidator(TelefoneValidador.Instance);
 
         RuleFor(c => c.Email)
             .SetValidator(EmailValidador.Instance);

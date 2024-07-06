@@ -1,5 +1,6 @@
 ﻿using AppFinanceiro.AgioBank.Domain.Common;
 using System.Text.RegularExpressions;
+using AppFinanceiro.AgioBank.Domain.Validators;
 
 namespace AppFinanceiro.AgioBank.Domain.ValueObjects;
 
@@ -19,9 +20,6 @@ public class Email(string endereco) : ObjetoNotificavel
 
     public void Validar()
     {
-        if (!Regex.IsMatch(Endereco, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
-        {
-            AdicionarNotificacao(new Notificacao("O email está em formato inválido"));
-        }
+        base.Validar(EmailValidador.Instance, this);
     }
 }

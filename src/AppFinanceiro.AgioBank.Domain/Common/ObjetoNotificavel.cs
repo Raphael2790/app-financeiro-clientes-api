@@ -1,4 +1,7 @@
-﻿namespace AppFinanceiro.AgioBank.Domain.Common;
+﻿using AppFinanceiro.AgioBank.Domain.Entities;
+using FluentValidation;
+
+namespace AppFinanceiro.AgioBank.Domain.Common;
 
 public abstract class ObjetoNotificavel
 {
@@ -27,5 +30,15 @@ public abstract class ObjetoNotificavel
     public bool EhValido()
     {
         return !Notificacoes.Any();
+    }
+
+    public virtual void Validar<T>(AbstractValidator<T> validator, T entidade) where T : ObjetoNotificavel
+    {
+        var result = validator.Validate(entidade);
+        if (!result.IsValid)
+        {
+            var notificacoes = result.Errors.Select(error => new Notificacao(error.ErrorMessage));
+            AdicionarNotificacoes(notificacoes);
+        }
     }
 }
