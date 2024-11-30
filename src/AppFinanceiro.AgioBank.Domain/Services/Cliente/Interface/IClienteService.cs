@@ -2,5 +2,5 @@
 
 public interface IClienteService
 {
-    
+    Task<bool> InativarCliente(Guid id);
 }

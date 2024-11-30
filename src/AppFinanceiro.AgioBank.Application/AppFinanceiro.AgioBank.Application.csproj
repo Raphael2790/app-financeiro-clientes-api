@@ -12,10 +12,17 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AppFinanceiro.AgioBank.Domain\AppFinanceiro.AgioBank.Domain.csproj" />
+    <ProjectReference Include="..\AppFinanceiro.AgioBank.Utils\AppFinanceiro.AgioBank.Utils.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\8.0.8\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
