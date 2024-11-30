@@ -1,22 +1,26 @@
+using AppFinanceiro.AgioBank.Api.Controllers;
+using AppFinanceiro.AgioBank.Api.Filters;
 using AppFinanceiro.AgioBank.Api.Middlewares;
-using Microsoft.AspNetCore.Mvc;
+using AppFinanceiro.AgioBank.Ioc;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.OperationFilter<AddHeaderOperationFilter>();
+    // Configure outras opções, se necessário
+});
 
 builder.Services.AddScoped<HeaderValidationMiddleware>();
 builder.Services.AddScoped<ExceptionMiddleware>();
+builder.Services.ConfigureDependencies();
 
 var app = builder.Build();
 
-app.MapPost("/cliente", ([FromServices] IServiceProvider serviceProvider, [FromBody] string texto) => 
-{
-    return "Hello World!";
-}).ShortCircuit();
+app.MapClientRoutes();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

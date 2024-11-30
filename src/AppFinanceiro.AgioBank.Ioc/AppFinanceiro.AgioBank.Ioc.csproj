@@ -6,4 +6,16 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AppFinanceiro.AgioBank.Application\AppFinanceiro.AgioBank.Application.csproj" />
+    <ProjectReference Include="..\AppFinanceiro.AgioBank.Data\AppFinanceiro.AgioBank.Data.csproj" />
+    <ProjectReference Include="..\AppFinanceiro.AgioBank.Domain\AppFinanceiro.AgioBank.Domain.csproj" />
+    <ProjectReference Include="..\AppFinanceiro.AgioBank.Utils\AppFinanceiro.AgioBank.Utils.csproj" />
+  </ItemGroup>
+
 </Project>

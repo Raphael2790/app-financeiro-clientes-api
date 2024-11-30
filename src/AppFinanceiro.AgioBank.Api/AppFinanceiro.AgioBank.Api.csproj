@@ -11,4 +11,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AppFinanceiro.AgioBank.Application\AppFinanceiro.AgioBank.Application.csproj" />
+    <ProjectReference Include="..\AppFinanceiro.AgioBank.Ioc\AppFinanceiro.AgioBank.Ioc.csproj" />
+  </ItemGroup>
+
 </Project>
